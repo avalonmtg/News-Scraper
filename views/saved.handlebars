@@ -1,1 +1,21 @@
-<h1>Hello</h1>
+
+<body class="page-background" id="main-page">
+    <div class="container">
+<h1>Saved Articles</h1>
+        <div class="row">
+            <div class="col-md-12">
+
+                {{#each article}}
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.title}}</h5>
+                        <a href={{this.link}} class="card-link">
+                       <a href="{{link}}" class="card-link" target="_blank">View Article</a>
+        <p class="card-text">{{intro}}...</p>
+        <a data-articleId= {{_id}} class="btn btn-primary unsave-btn">Remove Article</a>
+        <a data-articleId= {{_id}} class="btn btn-primary note-modal-btn" data-toggle="modal">Add note</a>
+      </div>
+    </div>
+  {{/each}}
+</div>        
+
